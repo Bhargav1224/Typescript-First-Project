@@ -3,16 +3,13 @@ import { Note } from "./models/notes.model";
 import Header from "./Components/Header";
 import { Container, Row, Col } from "react-bootstrap";
 import NotesList from "./Components/NotesList";
+import CreateNotes from "./Components/CreateNotes";
+import { parse } from "json5";
 function App() {
-  const [notes, setNotes] = useState<Note[]>([
-    {
-      id: new Date().toString(),
-      title: "Meetings",
-      text: "Schedule meeting with UI And Ux Team",
-      color: "red",
-      date: new Date().toString(),
-    },
-  ]);
+  // eslint-disable-next-line @typescript-eslint/no-use-before-define
+  // const localData = localStorage.getItem("notesData");
+  // const payload = parse(localData || "");
+  const [notes, setNotes] = useState<Note[]>([]);
 
   return (
     <>
@@ -20,7 +17,12 @@ function App() {
       <Container className="mt-5">
         <Row>
           <Col>
-            <NotesList notes={notes} />
+            <NotesList notes={notes} setNotes={setNotes} />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <CreateNotes notes={notes} setNotes={setNotes} />
           </Col>
         </Row>
       </Container>
