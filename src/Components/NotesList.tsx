@@ -1,4 +1,3 @@
-import { stringify } from "json5";
 import * as React from "react";
 import { Note } from "../models/notes.model";
 import Notes from "./Notes";

@@ -4,7 +4,6 @@ import Header from "./Components/Header";
 import { Container, Row, Col } from "react-bootstrap";
 import NotesList from "./Components/NotesList";
 import CreateNotes from "./Components/CreateNotes";
-import { parse } from "json5";
 function App() {
   // eslint-disable-next-line @typescript-eslint/no-use-before-define
   // const localData = localStorage.getItem("notesData");
