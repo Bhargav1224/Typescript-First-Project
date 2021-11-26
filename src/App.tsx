@@ -5,10 +5,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import NotesList from "./Components/NotesList";
 import CreateNotes from "./Components/CreateNotes";
 function App() {
-  // eslint-disable-next-line @typescript-eslint/no-use-before-define
-  // const localData = localStorage.getItem("notesData");
-  // const payload = parse(localData || "");
-  const [notes, setNotes] = useState<Note[]>([]);
+  const localData = JSON.parse(localStorage.getItem("notesData") || "[]");
+  // console.log(localData);
+  const [notes, setNotes] = useState<Note[]>(localData || []);
 
   return (
     <>

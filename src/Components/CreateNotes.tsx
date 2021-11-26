@@ -42,7 +42,7 @@ const CreateNotes: React.FunctionComponent<ICreateNotesProps> = ({
           <Form.Label>Title</Form.Label>
           <Form.Control type="text" placeholder="Enter Title" ref={titleRef} />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicText">
+        <Form.Group className="mb-3">
           <Form.Label>Text</Form.Label>
           <Form.Control
             type="text"
@@ -52,7 +52,7 @@ const CreateNotes: React.FunctionComponent<ICreateNotesProps> = ({
             ref={textRef}
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicText">
+        <Form.Group className="mb-3">
           <Form.Label htmlFor="colorInput">Notes Color</Form.Label>
           <Form.Control
             type="color"

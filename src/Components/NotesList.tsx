@@ -8,7 +8,7 @@ interface INotesListProps {
 }
 
 const NotesList: React.FC<INotesListProps> = ({ notes, setNotes }) => {
-  // localStorage.setItem("notesData", stringify(notes));
+  localStorage.setItem("notesData", JSON.stringify(notes));
   const handleDelete = (id: string) => {
     const updateNotes = notes?.filter((item) => item.id !== id);
     setNotes(updateNotes);
